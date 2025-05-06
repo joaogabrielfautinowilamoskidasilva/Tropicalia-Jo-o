@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function(){
     const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
     const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade');
     const alternaContraste = document.getElementById('alterna-contraste');
+    const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
+    botaoDeAcessibilidade.setAttribute('aria-expanded', !botaoSelecionado)
     
     let tamanhoAtualFonte = 1;
 
